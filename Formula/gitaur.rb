@@ -10,30 +10,18 @@ class Gitaur < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/exceptionate/gitaur/releases/download/v0.1.2/gitaur-darwin-amd64.tar.gz"
-      sha256 "28c52648cdded3488e604f578086de2c3925f475e9b2d4af433da090bf2d4858"
+      sha256 "110ca4c85acb7263d0af2121abb42e180209d932def3fd00a0e9ac1e9c0051a9"
 
       define_method(:install) do
-        if OS.mac? && Hardware::CPU.arm?
-          bin.install "gitaur-darwin-arm64" => "gitaur"
-        elsif OS.mac? && Hardware::CPU.intel?
-          bin.install "gitaur-darwin-amd64" => "gitaur"
-        else
-          bin.install "gitaur"
-        fi
+        bin.install "gitaur"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/exceptionate/gitaur/releases/download/v0.1.2/gitaur-darwin-arm64.tar.gz"
-      sha256 "fe5b380ba91453a15085a7d1538f721ae8f610ee1959b78a9fba30d493f29bd1"
+      sha256 "f95904214194b584e237103f0f6e62a921258bc519471e1533387c3950ce2b32"
 
       define_method(:install) do
-        if OS.mac? && Hardware::CPU.arm?
-          bin.install "gitaur-darwin-arm64" => "gitaur"
-        elsif OS.mac? && Hardware::CPU.intel?
-          bin.install "gitaur-darwin-amd64" => "gitaur"
-        else
-          bin.install "gitaur"
-        fi
+        bin.install "gitaur"
       end
     end
   end
@@ -41,28 +29,16 @@ class Gitaur < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/exceptionate/gitaur/releases/download/v0.1.2/gitaur-linux-amd64.tar.gz"
-      sha256 "43500081fcadfb6d5239f3886a0b160832eff287dff9217fe9ee108414e56e05"
+      sha256 "300d9f913a93faeeb161358290e02ec6efbc4a419c433269c5e7031a79bae4d4"
       define_method(:install) do
-        if OS.mac? && Hardware::CPU.arm?
-          bin.install "gitaur-darwin-arm64" => "gitaur"
-        elsif OS.mac? && Hardware::CPU.intel?
-          bin.install "gitaur-darwin-amd64" => "gitaur"
-        else
-          bin.install "gitaur"
-        fi
+        bin.install "gitaur"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/exceptionate/gitaur/releases/download/v0.1.2/gitaur-linux-arm64.tar.gz"
-      sha256 "75b7ba2fa39050ce563adf6dbd407a66c4898cf78082792a37e3bf77b5642d14"
+      sha256 "01f065b2217cd96c60fe7e2b829511287fa84b77627cde9e616378ecd5f40093"
       define_method(:install) do
-        if OS.mac? && Hardware::CPU.arm?
-          bin.install "gitaur-darwin-arm64" => "gitaur"
-        elsif OS.mac? && Hardware::CPU.intel?
-          bin.install "gitaur-darwin-amd64" => "gitaur"
-        else
-          bin.install "gitaur"
-        fi
+        bin.install "gitaur"
       end
     end
   end
