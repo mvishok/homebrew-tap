@@ -1,5 +1,5 @@
 class Gitaur < Formula
-  desc "A simple git utility CLI tool"
+  desc "A simple resume utility CLI tool"
   homepage "https://github.com/Exceptionate/gitaur"
   url "https://github.com/Exceptionate/gitaur/releases/download/v0.1.0/gitaur-macos-arm64.tar.gz"
   version "0.1.0"
